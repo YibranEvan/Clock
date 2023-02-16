@@ -106,7 +106,6 @@ const App = () => {
 
   const clock = () => {
     if(isRunning) {
-      // timeout
       resetTimer()
     } else {
       clearTimeout(timeout)

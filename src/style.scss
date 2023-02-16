@@ -1,0 +1,136 @@
+body {
+  background-color: rgb(49, 147, 227);
+}
+
+#container {
+  width: 700px;
+  height: 700px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 100px;
+  padding-bottom: 25px;
+  font-family: 'Orbitron', sans-serif;
+  text-decoration: underline;
+}
+.length-wrap {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
+  gap: 2%;
+  padding-bottom: 50px;
+  .break,
+  .session {
+    outline: solid black 1px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgb(64, 69, 204);
+  }
+  .break-row,
+  .session-row {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row;
+    font-size: 1.5rem;
+  }
+  #break-label, 
+  #session-label {
+    font-size: 2rem;
+  }
+
+  #break-decrement, #break-increment,
+  #session-decrement, #session-increment {
+    font-size: 2rem;
+
+    &:hover {
+      opacity: 80%;
+      color: yellow;
+      scale: 125%;
+    }
+    &:active {
+      opacity: 80%;
+      color: red;
+      scale: 125%;
+    }
+  }
+}
+
+.time-type {
+  text-align: center;
+  border: solid black 1px;
+  border-radius: 20px;
+  margin-left: 150px;
+  font-family: 'Orbitron', sans-serif;
+  margin-right:150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(64, 69, 204);
+  #timer-label {
+    font-size: 2rem;
+    padding-bottom: 5px;
+  }
+  #time-left {
+    font-size: 3rem;
+    padding-top: 5px;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 10%;
+  padding-top: 20px;
+  font-size: 2rem;
+  #start_stop{
+    &:hover {
+      opacity: 80%;
+      color: yellow;
+      scale: 125%;
+    }
+    &:active {
+      opacity: 80%;
+      color: red;
+      scale: 125%;
+    }
+  }
+  #reset {
+    &:hover {
+      animation-name: rotation;
+      animation-timing-function: cubic-bezier();
+      animation-delay: 0.2s;
+      animation-duration: 1s;
+      opacity: 80%;
+      color: yellow;
+      scale: 125%;
+    }
+    &:active {
+      opacity: 80%;
+      color: red;
+      scale: 125%;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+          -webkit-transform: rotate(0deg);
+  }
+  to {
+          -webkit-transform: rotate(-360deg);
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  #container {
+      transform: scale(0.5);
+      width: 100vw;
+    }
+  }
